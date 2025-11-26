@@ -23,3 +23,8 @@ SerializationVersion: 1.1.0.1
 **********************
 Transcript started, output file is C:\users\prade\OneDrive\2. Documents only\WindowsPowerShell\ReposPShell\_Powershell\PowerShell_transcript.MDWA.6CkFNXyM.20251126115842.txt
 ]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cprade\x5cOneDrive\x5c2. Documents only\x5cWindowsPowerShell\x5cReposPShell\x5c_PowershellPS C:\Users\prade\OneDrive\2. Documents only\WindowsPowerShell\ReposPShell\_Powershell> ]633;B
+PS>$global:__psEditorServices_userInput = $args[0]
+PS>$global:__psEditorServices_userInput = ""
+PS>Start-Transcript -OutputDirectory 'C:\users\prade\OneDrive\2. Documents only\WindowsPowerShell\ReposPShell\_Powershell\Powershell - Courses\'
+Transcript started, output file is C:\users\prade\OneDrive\2. Documents only\WindowsPowerShell\ReposPShell\_Powershell\Powershell - Courses\PowerShell_transcript.MDWA.lCFqlba9.20251126120315.txt
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cprade\x5cOneDrive\x5c2. Documents only\x5cWindowsPowerShell\x5cReposPShell\x5c_PowershellPS C:\Users\prade\OneDrive\2. Documents only\WindowsPowerShell\ReposPShell\_Powershell> ]633;B
