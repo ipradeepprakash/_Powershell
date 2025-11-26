@@ -26,7 +26,7 @@ Get-Member	Gets the properties and methods of objects.
 
 
 
-# save & Install the SqlServer module to a path (You can choose a folder of your preference)
+## save & Install the SqlServer module to a path (You can choose a folder of your preference)
 Save-Module -Name SqlServer -Path $env:TEMP
 
 # Overwrite a previous version of the SqlServer module, -force will install newer version with older cersion side-by-side.
