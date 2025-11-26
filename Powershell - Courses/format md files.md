@@ -30,4 +30,27 @@ put braces before & after the URL
 same as above but add ! before braces
 ![github logo](https://brand.github.com/_next/static/media/logo-01.95b2b0a0.png)
 
+## for Code
+use 3 back ticks before and after the code 3 back ticks
+
+```
+use master
+go
+select * from sys.sysdatabases
+```
+## for list
+use ashtrichs followed by word
+* one 1
+* two 2
+* three
+
+## for Numbered list
+use number before a word
+1. one
+2. two
+3. three
+
+
+
+
 
