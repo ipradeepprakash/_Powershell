@@ -16,7 +16,8 @@ Automating Administrative tasks:
 get-date
 
 # transcribe: store all the commands typed to a folder. it will automatically stores to \Documents
-start-transscript 
+- start-transscript 
+- start-transcript -outputdirectory 'C:\Users\prade\OneDrive\2. Documents only\WindowsPowerShell\ReposPShell\_Powershell\Powershell - Courses'
 
 
 
