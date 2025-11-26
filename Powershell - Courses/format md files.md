@@ -28,6 +28,6 @@ put braces before & after the URL
 
 ## for Image 
 same as above but add ! before braces
-![github logo](https://brand.github.com/foundations/logo)
+![github logo](https://brand.github.com/_next/static/media/logo-01.95b2b0a0.png)
 
 
