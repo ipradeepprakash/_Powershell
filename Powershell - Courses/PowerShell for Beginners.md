@@ -15,6 +15,8 @@ Automating Administrative tasks:
 # simple commands
 get-date
 
+# transcribe: store all the commands typed to a folder. it will automatically stores to \Documents
+start-transscript 
 
 
 
