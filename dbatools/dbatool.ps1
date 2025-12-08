@@ -43,7 +43,11 @@ Get-DbaDatabase -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA
         Get-DbaDatabase -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA |Select-Object computername,sqlinstance,name,recoverymodel,status,isaccessible,lastfullbackup,lastdifffbackup,lastlogbackup| ft -AutoSize
 
 
-
+# # 4. Run any T-SQL query you want
+        # Syntax
+        # Invoke-DbaQuery -SqlInstance sql01, sql02, sql03 -Query "SELECT @@VERSION"
+        # 4. Run any T-SQL query you want
+        Invoke-DbaQuery -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA -Query "SELECT @@VERSION" | ft -AutoSize
 
 
 
