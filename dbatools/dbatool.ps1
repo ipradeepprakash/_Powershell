@@ -3,27 +3,46 @@ $PSVersionTable.PSVersion
 
 # 1. Install dbatools (takes about 30 seconds)
 Install-Module dbatools -Scope CurrentUser
+    # 1.1 check dbatools version
+    Get-Module dbatools -ListAvailable | Select-Object Name, Version
 
 # 2. See all databases on your local SQL Server
 # Replace 'sql01' with your SQL Server name if needed
-Get-DbaDatabase -SqlInstance sql01
+Get-DbaDatabase -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA
+
+<#
+
+# got error 
+# WARNING: [20:37:31][Get-DbaDatabase] Failure | The certificate chain was issued by an authority that is not trusted
+# -- Fix is execute below command
+    Set-DbatoolsConfig -FullName sql.connection.trustcert -Value $true -Register
+
+#>
+
+# finding SQL instances
+
+        # get help command in finding SQL instances
+        get-help Find-DbaInstance -examples
+
+        # get help in finding SQL instances with domain details
+        Find-DbaInstance -DiscoveryType Domain, DataSourceEnumeration
+
+        # get help in finding SQL instances with domain details
+        Find-DbaInstance -DiscoveryType All
+        Find-DbaInstance -DiscoveryType All -ScanType All
+
+        # Using Active Directory
+        Get-ADComputer -Filter { name -like 'sql*' } | Find-DbaInstance | Out-GridView
 
 
-# get help command in finding SQL instances
-get-help Find-DbaInstance -examples
+# checking SQL server Database details 
+      
+        # Syntax: 
+        # Get-DbaDatabase -SqlInstance <SQL instance1>,<SQL instance2>,<SQL instance3> | ft -AutoSize
+        cls
+        Get-DbaDatabase -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA |Select-Object computername,sqlinstance,name,recoverymodel,status,isaccessible,lastfullbackup,lastdifffbackup,lastlogbackup| ft -AutoSize
 
-# get help in finding SQL instances with domain details
-Find-DbaInstance -DiscoveryType Domain, DataSourceEnumeration
-
-# get help in finding SQL instances with domain details
-Find-DbaInstance -DiscoveryType All
-Find-DbaInstance -DiscoveryType All -ScanType All
-
-# Using Active Directory
-Get-ADComputer -Filter { name -like 'sql*' } | Find-DbaInstance | Out-GridView
-
-
-
+        
 
 
 
