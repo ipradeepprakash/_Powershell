@@ -14,7 +14,7 @@ Get-DbaDatabase -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA
 
 # got error 
 # WARNING: [20:37:31][Get-DbaDatabase] Failure | The certificate chain was issued by an authority that is not trusted
-# -- Fix is execute below command
+# -- Fix is execute below command (https://vladdba.com/2023/07/29/fix-certificate-authority-that-is-not-trusted-when-using-dbatools/)
     Set-DbatoolsConfig -FullName sql.connection.trustcert -Value $true -Register
 
 #>
@@ -42,7 +42,7 @@ Get-DbaDatabase -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA
         cls
         Get-DbaDatabase -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA |Select-Object computername,sqlinstance,name,recoverymodel,status,isaccessible,lastfullbackup,lastdifffbackup,lastlogbackup| ft -AutoSize
 
-        
+
 
 
 
