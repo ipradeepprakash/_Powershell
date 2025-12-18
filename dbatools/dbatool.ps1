@@ -8,7 +8,7 @@ Install-Module dbatools -Scope CurrentUser
 
 # 2. See all databases on your local SQL Server
 # Replace 'sql01' with your SQL Server name if needed
-Get-DbaDatabase -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA
+Get-DbaDatabase -SqlInstance MDWA\MSSQLSERVER01,MDWA\TEST,MDWA | ft
 
 <#
 
